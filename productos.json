@@ -1,0 +1,39 @@
+[
+    {
+      "name": "Assassin's Creed IV: Black Flag",
+      "price": 59.99
+    },
+    {
+      "name": "Red Dead Redemption 2",
+      "price": 79.99
+    },
+    {
+      "name": "The Legend of Zelda: Breath of the Wild",
+      "price": 104.99
+    },
+    {
+      "name": "The Witcher 3: Wild Hunt",
+      "price": 99.99
+    },
+    {
+      "name": "Cyberpunk 2077",
+      "price": 31.25
+    },
+    {
+      "name": "Battlefield 2042",
+      "price": 23.99
+    },
+    {
+      "name": "Assassin's Creed: Valhalla",
+      "price": 25.50
+    },
+    {
+      "name": "God of War: Ragnarok",
+      "price": 20
+    },
+    {
+      "name": "Portal 2",
+      "price": 19.99
+    }
+  ]
+  

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Metadatos -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dinoka Corp | inicio</title>
+    
+    <!-- Enlaces a hojas de estilo -->
+    <link rel="stylesheet" href="css/styles.css"> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous"> <!-- Hoja de estilos de Bootstrap -->
+    <script src="jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- Metadatos para SEO -->
+    <meta name="description" content="Descubre los mejores videojuegos y servicios de nuestra compañía. Ofrecemos experiencias de juego únicas y emocionantes para todos los jugadores.">
+    <meta name="keywords" content="Compañía de videojuegos, gaming, videojuegos, productos para gamers, experiencia de juego, consolas, accesorios de juego, plataformas de juego, entretenimiento digital">
+    
+    <!-- Íconos -->
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <link rel="manifest" href="img/site.webmanifest">
+
+    <style>body { font-family: sans-serif; }</style>
+</head>
+<body>
+    <!-- Encabezado -->
+    <header class="header">
+        <div class="header-icon">
+          <img src="img/dinocorp.png" alt="logo de Dinoka Corp">
+        </div>
+        <nav class="header-links">
+          <a href="index.html" class="active">Juegos</a>
+          <a href="pages/componentes.html">Componentes</a>
+          <a href="pages/consolas.html">Consolas</a>
+          <a href="pages/multimedia.html">Multimedia</a>
+          <a href="pages/contacto.html">Contacto</a>
+        </nav>
+        <!-- Botones de inicio de sesión y registro -->
+        <div class="user-actions">
+          <div id="user-points"></div>
+          <button id="cart-btn">
+            <img id="cart-icon" src="img/cart.png" alt="Icono de Carrito">
+            Carrito de compras
+          </button>
+          <button id='login-btn' class="btn btn-primary">Iniciar sesión</button>
+        </div>
+
+      
+    </header>
+    
+    <!-- Sección de la compañía -->
+    <section class="company-section">
+        <div class="company-name">
+          <h1>Dinoka Corp</h1>
+        </div>
+        <div class="company-description">
+          <p>Somos una tienda especializada en videojuegos y consolas. Nuestra pasión por los juegos nos impulsa a ofrecer la mejor selección de títulos, desde clásicos hasta las últimas novedades. ¡Explora nuestro catálogo y encuentra tus juegos favoritos!</p>
+        </div>
+    </section>
+    
+    <!-- Sección de carrusel -->
+    <section class="carousel-section">
+      <div id="carouselExampleCaptions" class="carousel slide">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <!-- Diapositiva 1 -->
+          <div class="carousel-item active">
+            <img src="img/componentes.jpeg" class="d-block w-100" alt="Componentes-Cascos">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Auriculares</h5>
+              <p>¡Nuestros exploradores necesitan la mejor escucha para su aventura!</p>
+            </div>
+          </div>
+          <!-- Diapositiva 2 -->
+          <div class="carousel-item">
+            <img src="img/Juegos.png" class="d-block w-100" alt="Juegos variados">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>¡Explora! ¡Lucha! ¡Diviértete!</h5>
+              <p>¡Elige tu camino! Tenemos una variedad de aventuras para ti.</p>
+            </div>
+          </div>
+          <!-- Diapositiva 3 -->
+          <div class="carousel-item">
+            <img src="img/raton.jpg" class="d-block w-100" alt="Mouse gamer">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>¡Ratones Gamer!</h5>
+              <p>¿Qué es el cazador sin una buena puntería? ¡Desarrolla tu puntería de la mejor manera!.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Botones de control del carrusel -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- Sección de ejemplos de juegos -->
+    <section class="company-section">
+      <div class="company-name">
+        <h2>¡Todos tus juegos favoritos, en un mismo lugar!</h2>
+      </div>
+      <div class="company-description">
+        <p>Elige entre nuestra variedad de los mejores juegos para ti.</p>
+      </div>
+    </section>
+
+    <!-- Sección de productos -->
+    <section class="products-section">
+        <div class="container">
+          <div id="products-container">
+            <div class="row">
+              <!-- Tarjeta 1 -->
+              <div class="col-md-4 col-sm-6 col-12 mb-4">
+                <div class="card">
+                    <img src="img/assa.jpg" class="card-img-top" alt="Assassin's_Creed_IV_-_Black_Flag">
+                    <div class="card-body">
+                        <p class="card-text">Assassin's Creed IV: Black Flag</p>
+                        <div class="price-container">
+                          <button class="price-button">$59.99</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+              <!-- Tarjeta 2 -->
+              <div class="col-md-4 col-sm-6 col-12 mb-4">
+                <div class="card">
+                  <img src="img/RedDead.jpg" class="card-img-top" alt="Ejemplo de Red Dead Redemption2">
+                  <div class="card-body">
+                    <p class="card-text">Red Dead Redemption 2</p>
+                    <div class="price-container">
+                      <button class="price-button">$79.99</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Tarjeta 3 -->
+              <div class="col-md-4 col-sm-6 col-12 mb-4">
+                <div class="card">
+                  <img src="img/zelda.jpg" class="card-img-top" alt="Ejemplo de The Legend of Zelda: Breath of the Wild">
+                  <div class="card-body">
+                    <p class="card-text">The Legend of Zelda: Breath of...</p>
+                    <div class="price-container">
+                      <button class="price-button">$104.99</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Tarjeta 4 -->
+              <div class="col-md-4 col-sm-6 col-12 mb-4">
+                <div class="card">
+                  <img src="img/witcher3-1638987659679.jpg" class="card-img-top" alt="Ejemplo de The Witcher 3:Wild Hunt">
+                  <div class="card-body">
+                    <p class="card-text">The Witcher 3:Wild Hunt</p>
+                    <div class="price-container">
+                      <button class="price-button">$99.99</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Tarjeta 5 -->
+              <div class="col-md-4 col-sm-6 col-12 mb-4">
+                <div class="card">
+                  <img src="img/Cyberpunk20772.jpg" class="card-img-top" alt="Ejemplo de Cyberpunk 2077">
+                  <div class="card-body">
+                    <p class="card-text">Cyberpunk 2077</p>
+                    <div class="price-container">
+                      <button class="price-button">$31.25</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Tarjeta 6 -->
+              <div class="col-md-4 col-sm-6 col-12 mb-4">
+                <div class="card">
+                  <img src="img/battlefield.jpg" class="card-img-top" alt="Ejemplo de Battlefield 2042">
+                  <div class="card-body">
+                    <p class="card-text">Battlefield 2042</p>
+                    <div class="price-container">
+                      <button class="price-button">$23.99</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Tarjeta 7 -->
+              <div class="col-md-4 col-sm-6 col-12 mb-4">
+                <div class="card">
+                  <img src="img/val.png" class="card-img-top" alt="Ejemplo de Assassin's Creed: Valhalla">
+                  <div class="card-body">
+                    <p class="card-text">Assassin's Creed: Valhalla </p>
+                    <div class="price-container">
+                      <button class="price-button">$25.50</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Tarjeta 8 -->
+              <div class="col-md-4 col-sm-6 col-12 mb-4">
+                <div class="card">
+                  <img src="img/godofwar.png" class="card-img-top" alt="Ejemplo de God of War: Ragnarok">
+                  <div class="card-body">
+                    <p class="card-text">God of War: Ragnarok</p>
+                    <div class="price-container">
+                      <button class="price-button">$20</button>
+                    </div>
+                  </div>
+                </div>
+              </div>                                                            
+              <!-- Tarjeta 9 -->
+              <div class="col-md-4 col-sm-6 col-12 mb-4">
+                <div class="card">
+                  <img src="img/Portal2.jpg" class="card-img-top" alt="Imagen de Portal2">
+                  <div class="card-body">
+                    <p class="card-text">Portal 2</p>
+                    <div class="price-container">
+                      <button class="price-button">$19.99</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>  
+        </div>
+    </section>
+    <section class="quote-form">
+      <h2>Solicitar Cotización</h2>
+      <form id="quote-form">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+    
+        <label for="apellido">Apellido:</label>
+        <input type="text" id="apellido" name="apellido" required>
+    
+        <label for="correo">Correo Electrónico:</label>
+        <input type="email" id="correo" name="correo" required>
+    
+        <button type="submit">Enviar Cotización</button>
+      </form>
+    </section>
+
+    <!-- Pie de página -->
+    <footer class="footer">
+        <div class="footer-container">
+          <!-- Iconos de redes sociales -->
+          <div class="footer-icons">
+            <a href="https://www.facebook.com/" target="_blank"><img src="img/facebook.png" alt="Facebook"></a>
+            <a href="https://www.instagram.com/" target="_blank"><img src="img/instagram.png" alt="Instagram"></a>
+            <a href="https://www.twitter.com/" target="_blank"><img src="img/twitter.png" alt="Twitter"></a>
+          </div>
+          <!-- Copyright -->
+          <p class="footer-copyright">&copy; 2023 Dinoka Corp. Todos los derechos reservados.</p>
+          <!-- Logo en el pie de página -->
+          <div class="footer-logo">
+            <img src="img/dinocorp.png" alt="Logo Dinoka Corp">
+          </div>
+        </div>
+    </footer>
+    
+    <!-- Enlace al archivo JavaScript de Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>

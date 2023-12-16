@@ -1,0 +1,346 @@
+@charset "UTF-8";
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #333;
+  padding: 10px 20px;
+}
+
+.header-icon img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+.header-icon img:hover {
+  transform: scale(1.3) rotate(360deg);
+}
+
+.header-links {
+  display: flex;
+}
+
+.header-links a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  transition: transform 0.3s ease-in-out;
+}
+.header-links a:hover {
+  text-decoration: underline;
+  transform: rotate(5deg) translateY(-5px);
+  transition: transform 0.3s ease-in-out;
+}
+.header-links a.active {
+  color: yellow;
+}
+
+body {
+  background-image: url("../img/riot3.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.products-section {
+  margin-top: 30px;
+}
+
+.card-body {
+  background-color: #333;
+}
+
+.card-text {
+  color: white;
+}
+
+.company-section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.726); /* Fondo semitransparente */
+  color: rgb(255, 255, 255);
+}
+
+.company-name h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.company-description p {
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  max-width: 600px;
+}
+
+.contact-section {
+  padding: 50px 0;
+  background-color: transparent;
+}
+
+.contact-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  justify-items: center;
+  text-align: center;
+}
+
+.contact-info {
+  background-color: white; /* Fondo blanco para la caja de información */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info h2 {
+  margin-bottom: 15px;
+  font-size: 24px;
+}
+.contact-info ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.contact-info li {
+  margin-bottom: 10px;
+}
+
+.contact-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.contact-icon img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+.contact-icon img:hover {
+  transform: scale(1.3) rotate(360deg);
+}
+
+.footer {
+  background-color: #343a40;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-icons {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.footer-icons img {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  transition: transform 0.3s ease-in-out;
+}
+.footer-icons img:hover {
+  transform: scale(1.3) rotate(360deg);
+}
+
+.footer-logo img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transition: transform 0.3s ease-in-out;
+}
+.footer-logo img:hover {
+  transform: scale(1.3) rotate(360deg);
+}
+.price-container {
+  text-align: center;
+}
+
+.price-button {
+  background-color: #007bff; /* Color azul */
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.price-button:hover {
+  background-color: #0056b3; /* Color azul más oscuro al pasar el ratón */
+}
+/* Estilos del carrito de compras */
+.cart-section {
+  background-color: #333;
+  color: white;
+  padding: 20px 0;
+}
+
+.cart-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.cart-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cart-items {
+  flex-grow: 1;
+}
+
+.cart-items h3 {
+  border-bottom: 2px solid #555;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.cart-summary {
+  width: 30%;
+  padding: 0 20px;
+}
+
+.summary-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+#total-price {
+  font-weight: bold;
+}
+
+#checkout-btn {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+  margin-top: 20px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+#checkout-btn:hover {
+  background-color: #218838;
+}
+/* Estilos para los botones de inicio de sesión y registrarse */
+.user-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  color: white;
+  background-color: #6c757d; /* Color del botón similar al de las tarjetas de juegos */
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #495057; /* Cambio de color al pasar el ratón (hover) */
+}
+/* Estilos para el botón del carrito de compras */
+#cart-btn {
+  background-color: yellow;
+  color: black;
+  border: none;
+  padding: 10px 15px;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+#cart-btn:hover {
+  background-color: #ffcc00; /* Cambia el color al hacer hover */
+}
+
+/* Estilos para la imagen del carrito */
+#cart-icon {
+  width: 20px; /* Ajusta el tamaño según tus necesidades */
+  margin-right: 5px;
+}
+#user-points {
+  background-color: black;
+  color: yellow;
+  padding: 5px;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+/* Estilos para la sección de cotización */
+.quote-form {
+  background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco semitransparente */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 30px;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.quote-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.quote-form label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.quote-form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.quote-form button {
+  background-color: #007bff; /* Color azul */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.quote-form button:hover {
+  background-color: #0056b3; /* Color azul más oscuro al pasar el ratón */
+}
+
+
+
+
+
+
+
+/*# sourceMappingURL=styles.css.map */
