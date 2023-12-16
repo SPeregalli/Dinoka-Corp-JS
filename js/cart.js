@@ -1,15 +1,17 @@
-// Obtener todos los botones de precio
 const priceButtons = document.querySelectorAll('.price-button');
 
-// Carrito de compras
-const cart = [];
-let userPoints = 500; // Puntos iniciales del usuario
 
-// Elemento para mostrar la cantidad de puntos del usuario
+let cart = JSON.parse(localStorage.getItem('cart')) || [];
+let userPoints = JSON.parse(localStorage.getItem('userPoints')) || 500;
+
 const userPointsElement = document.getElementById('user-points');
 userPointsElement.textContent = `Puntos: ${userPoints}`;
 
-// Función para agregar un juego al carrito
+function saveDataToLocalStorage() {
+  localStorage.setItem('cart', JSON.stringify(cart));
+  localStorage.setItem('userPoints', JSON.stringify(userPoints));
+}
+
 function addToCart(gameName, gamePrice) {
   cart.push({ name: gameName, price: gamePrice });
   Swal.fire({
@@ -19,9 +21,9 @@ function addToCart(gameName, gamePrice) {
     confirmButtonText: 'OK',
   });
   updateCartCounter();
+  saveDataToLocalStorage(); 
 }
 
-// Función para mostrar el carrito detallado
 function showDetailedCart() {
   let totalPrice = 0;
   let cartMessage = '<ul>';
@@ -34,8 +36,6 @@ function showDetailedCart() {
 
   cartMessage += '</ul>';
   cartMessage += `<p>Total: $${totalPrice.toFixed(2)}</p>`;
-
-  // Agregar botón de comprar al carrito
   cartMessage += '<button id="buy-cart" class="buy-button">Comprar</button>';
 
   Swal.fire({
@@ -46,7 +46,6 @@ function showDetailedCart() {
     cancelButtonText: 'Cerrar',
   });
 
-  // Agregar evento clic al botón de comprar en el carrito
   const buyCartButton = document.getElementById('buy-cart');
   buyCartButton.addEventListener('click', () => {
     const paymentMethod = prompt('¿Cómo deseas pagar? (paypal/puntos)');
@@ -61,20 +60,19 @@ function showDetailedCart() {
         Swal.fire('Error', 'No tienes suficientes puntos para realizar esta compra.', 'error');
       } else {
         Swal.fire('¡Compra realizada!', `Gracias por tu compra con puntos.`, 'success');
-        // Restar puntos del usuario
         userPoints -= totalCost;
         userPointsElement.textContent = `Puntos: ${userPoints}`;
+        saveDataToLocalStorage(); 
       }
     } else {
       Swal.fire('Error', 'Método de pago no válido.', 'error');
     }
 
-    // Limpiar carrito después de la compra
     cart.length = 0;
     updateCartCounter();
+    saveDataToLocalStorage(); 
   });
 
-  // Agregar evento clic para eliminar items
   const removeButtons = document.querySelectorAll('.remove-item');
   removeButtons.forEach(button => {
     button.addEventListener('click', () => {
@@ -82,23 +80,21 @@ function showDetailedCart() {
       cart.splice(indexToRemove, 1);
       showDetailedCart();
       updateCartCounter();
+      saveDataToLocalStorage(); 
     });
   });
 }
 
-// Función para actualizar el contador del carrito
 function updateCartCounter() {
   const cartCounter = document.getElementById('cart-counter');
   cartCounter.textContent = cart.length.toString();
 }
 
-// Botón de carrito
 const cartButton = document.getElementById('cart-btn');
 cartButton.addEventListener('click', () => {
   showDetailedCart();
 });
 
-// Botón de comprar
 const buyButton = document.createElement('button');
 buyButton.textContent = 'Comprar';
 buyButton.addEventListener('click', () => {
@@ -114,29 +110,27 @@ buyButton.addEventListener('click', () => {
       Swal.fire('Error', 'No tienes suficientes puntos para realizar esta compra.', 'error');
     } else {
       Swal.fire('¡Compra realizada!', `Gracias por tu compra con puntos.`, 'success');
-      // Restar puntos del usuario
       userPoints -= totalCost;
       userPointsElement.textContent = `Puntos: ${userPoints}`;
+      saveDataToLocalStorage(); 
     }
   } else {
     Swal.fire('Error', 'Método de pago no válido.', 'error');
   }
 
-  // Limpiar carrito después de la compra
   cart.length = 0;
   updateCartCounter();
+  saveDataToLocalStorage(); 
 });
 
-// Agregar botón de comprar al DOM
 const quoteForm = document.getElementById('quote-form');
 quoteForm.appendChild(buyButton);
 
-// Evento clic en los botones de precio
 priceButtons.forEach(button => {
   button.addEventListener('click', () => {
     const gameCard = button.closest('.card');
     const gameName = gameCard.querySelector('.card-text').textContent;
-    const gamePrice = parseFloat(button.textContent.slice(1)); // Obtener el precio del botón
+    const gamePrice = parseFloat(button.textContent.slice(1));
 
     addToCart(gameName, gamePrice);
   });
